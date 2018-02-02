@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<package name="a" extends="struts-default">
+		<action name="validate" method="validate" class="ayush.UserAction">
+			<result name="success">dashboard.jsp</result>
+			<result name="success1">dashboard1.jsp</result>
+			<result name="success2">dashboard2.jsp</result>
+			<result name="success3">dashboard3.jsp</result>
+			<result name="error">index1.jsp</result>
+			<result name="contact">contactManager.jsp</result>
+		</action>
+		<action name="view" method="view" class="ayush.UserAction">
+			<result name="success">employees.jsp</result>
+			<result name="error">error1.jsp</result>
+		</action>
+		<action name="change" method="change" class="ayush.UserAction">
+			<result name="success">view.jsp</result>
+		</action>
+		<action name="create" method="create" class="ayush.UserAction">
+			<result name="success">createSuccess.jsp</result>
+			<result name="error">error2.jsp</result>
+		</action>
+		<action name="sendnotify" method="view" class="ayush.UserAction">
+			<result name="success">sendnotify.jsp</result>
+			<result name="error">error1.jsp</result>
+		</action>
+		<action name="sendnotification" method="notificationMessage" class="ayush.MessageAction">
+			<result name="success">sendMessageSuccessful.jsp</result>
+		</action>
+		<action name="notification" method="viewNotification" class="ayush.ToWhomAction">
+			<result name="success">viewNotification.jsp</result>
+			<result name="nomessage">noMessage.jsp</result>
+		</action>
+		<action name="listManager" method="listManager" class="ayush.UserAction">
+			<result name="success">listManager.jsp</result>
+		</action>
+		<action name="logout" method="logout" class="ayush.UserAction">  
+			<result name="success">/index.jsp</result>  
+		</action>
+		
+	</package>
+</struts>

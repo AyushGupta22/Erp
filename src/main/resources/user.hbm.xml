@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="ayush.User" table="User">
+		<id name="userId">
+			<generator class="increment"></generator>
+		</id>
+		<property name="userName" column="username"></property>
+		<property name="status" column="status"></property>
+		<property name="position" column="position"></property>
+		<property name="emailid" column="emailid"></property>
+		<property name="mobile" column="mobile"></property>
+		<property name="password" column="password"></property>
+		<property name="registrationDate" column="registration_date"></property>
+		<property name="accountCreatedBy" column="account_created_by"></property>
+		<property name="gender" column="gender"></property>
+		<property name="managerId" column="manager_id"></property>
+		
+	</class>
+
+</hibernate-mapping>

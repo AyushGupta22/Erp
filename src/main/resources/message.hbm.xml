@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="ayush.Message" table="message">
+		<id name="mid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="message" column="message"></property>
+		<property name="subject" column="subject"></property>
+		<property name="senderid" column="senderid"></property>
+		<property name="msgtime" column="msgtime"></property>
+	</class>
+
+</hibernate-mapping>
