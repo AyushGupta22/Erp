@@ -42,12 +42,12 @@
 </style>
 </head>
 <body>
-<% String pos = (String)session.getAttribute("position"); %>
-<div class="header"><h1><%=pos.toUpperCase() %></h1></div>
-<%
+<% String pos = (String)session.getAttribute("position"); 
 String sid = (String)session.getAttribute("login");
-if(sid.equals("true")){
+if(sid != null){
 %>
+<div class="header"><h1><%=pos.toUpperCase() %></h1></div>
+
 <div class="main">
 	<% if(pos.equals("management") || pos.equals("manager")) %><a href="view">View Employees</a>
 	<% if(pos.equals("management") || pos.equals("manager")) %><a href="createAccount.jsp">Create Account</a>
